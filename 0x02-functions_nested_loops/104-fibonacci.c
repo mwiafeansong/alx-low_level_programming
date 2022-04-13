@@ -16,11 +16,11 @@ int main(void)
 	printf("%lu, ", num1);
 	printf("%lu, ", num2);
 
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 96; i++)
 	{
 		fib = num1 + num2;
 		printf("%lu", fib);
-		if (i == 97)
+		if (i == 95)
 			break;
 		printf(", ");
 		num1 = num2;
