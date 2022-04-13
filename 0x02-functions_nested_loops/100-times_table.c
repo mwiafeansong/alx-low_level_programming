@@ -43,8 +43,9 @@ void print_times_table(int n)
 					_putchar((prod % 10) + '0');
 				}
 			}
-			_putchar('\n');
+			if (j != n)
+				_putchar('\n');
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
