@@ -8,17 +8,17 @@
 
 int main(void)
 {
-	int num1 = 1;
-	int num2 = 2;
-	int fib;
+	unsigned long long int num1 = 1;
+	unsigned long long int num2 = 2;
+	unsigned long long int fib;
 	int i;
 
-	printf("%d, ", num1);
-	printf("%d, ", num2);
+	printf("%lu, ", num1);
+	printf("%lu, ", num2);
 	for (i = 0; i < 48; i++)
 	{
 		fib = num1 + num2;
-		printf("%d", fib);
+		printf("%lu", fib);
 		if (i == 47)
 			break;
 		printf(", ");
