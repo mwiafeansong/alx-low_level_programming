@@ -14,7 +14,7 @@ int main(void)
 	int i;
 
 	printf("%d, ", num1);
-	printf("%d, ", num2;
+	printf("%d, ", num2);
 	for (i = 0; i < 48; i++)
 	{
 		fib = num1 + num2;
