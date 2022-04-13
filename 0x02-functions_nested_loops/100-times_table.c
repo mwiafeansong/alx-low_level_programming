@@ -12,25 +12,27 @@ void print_times_table(int n)
 	int i;
 	int j;
 	int prod;
+	int zero = 0;
 
 	if (n >= 0 && n < 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			_putchar('0');
+			_putchar(zero + '0');
 			for (j = 1; j <= n; j++)
 			{
+				prod = i * j;
 				_putchar(',');
 				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
-				prod = i * j;
 				if (prod <= 9)
 				{
+					_putchar(' ');
+					_putchar(' ');
 					_putchar(prod + '0');
 				}
 				else if (prod > 9 && prod < 100)
 				{
+					_putchar(' ');
 					_putchar((prod / 10) + '0');
 					_putchar((prod % 10) + '0');
 				}
