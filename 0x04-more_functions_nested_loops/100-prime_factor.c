@@ -11,7 +11,7 @@ int main(void)
 	long n;
 	long i;
 
-	n = 612852475143
+	n = 612852475143;
 
 	for (i = 2; n > i; i++)
 	{
