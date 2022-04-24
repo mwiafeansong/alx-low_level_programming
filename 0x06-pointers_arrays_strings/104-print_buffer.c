@@ -30,7 +30,7 @@ void print_buffer(char *b, int size)
 			       printf("%02x", *(b + o + i));
 			else
 				printf(" ");
-			if (i % 2)
+			if (i % 2 == 0)
 				printf(" ");
 		}
 
