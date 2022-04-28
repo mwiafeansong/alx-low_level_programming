@@ -33,7 +33,7 @@ int iteration(char *s, int i)
 }
 
 /**
- * is_palindrome: checks if a string is a palindrome
+ * is_palindrome - checks if a string is a palindrome
  * @s: the string
  *
  * Return: 0 if false, 1 if true
