@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * free grid - frees 2D grid
+ * free_grid - frees 2D grid
  * @grid: the 2D grid
  * @height: number of rows in grid
  *
@@ -13,7 +13,14 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
-	for (i = height; i >= 0; i--)
-		free(grid[i]);
-	free(grid);
+	if (grid == NULL)
+	{
+		return;
+	{
+	else
+	{
+		for (i = height - 1; i >= 0; i--)
+			free(grid[i]);
+		free(grid);
+	}
 }
