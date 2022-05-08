@@ -4,7 +4,7 @@
 /**
  * free_cgrid - frees 2D grid of memory
  * @grid: the 2D grid
- * height: number of rows in grid
+ * @height: number of rows in grid
  *
  * Return: None
  */
