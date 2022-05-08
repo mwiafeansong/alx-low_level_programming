@@ -39,15 +39,12 @@ char **strtow(char *str)
 		if (str[a] != ' ' && (str[a + 1] == ' ' || str[a + 1] == '\0'))
 			height++;
 	}
-
 	p = malloc((height + 1) * sizeof(char *));
-
 	if (p == NULL || height == 0)
 	{
 		free(p);
 		return (NULL);
 	}
-
 	for (i = 0; i < height; i++)
 	{
 		for (j = sp; str[j] != '\0'; j++)
@@ -57,7 +54,6 @@ char **strtow(char *str)
 			if (str[j] != ' ' && (str[j + 1] == ' ' || str[j + 1] == '\0'))
 			{
 				p[i] = malloc((j - sp + 2) * sizeof(char));
-				
 				if (p[i] == NULL)
 				{
 					free_cgrid(p, i);
