@@ -42,6 +42,12 @@ char **strtow(char *str)
 
 	p = malloc((height + 1) * sizeof(char *));
 
+	if (p == NULL || height == 0)
+	{
+		free(p);
+		return (NULL);
+	}
+
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; str[j] != '\0'; j++)
@@ -62,8 +68,8 @@ char **strtow(char *str)
 		}
 
 		for (k = 0; sp <= j; sp++, k++)
-			p[i][j] = str[sp];
-		p[i][j] = '\0';
+			p[i][k] = str[sp];
+		p[i][k] = '\0';
 	}
 	p[i] = NULL;
 	return (p);
