@@ -40,7 +40,7 @@ char **strtow(char *str)
 			height++;
 	}
 
-	p = malloc(height * sizeof(char *));
+	p = malloc((height + 1) * sizeof(char *));
 
 	for (i = 0; i < height; i++)
 	{
