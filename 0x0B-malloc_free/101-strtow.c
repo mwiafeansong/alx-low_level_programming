@@ -50,7 +50,7 @@ char **strtow(char *str)
 
 	for (i = 0; i < height; i++)
 	{
-		for (j = 0; str[j] != '\0'; j++)
+		for (j = sp; str[j] != '\0'; j++)
 		{
 			if (str[j] == ' ')
 				sp++;
