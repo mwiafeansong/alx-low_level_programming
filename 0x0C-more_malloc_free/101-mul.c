@@ -51,7 +51,7 @@ int _atoi(const char *s)
 
 void print_int(unsigned long int n)
 {
-	unsigned long int i, resp, divisor;
+	unsigned long int i, resp, divisor = 1;
 
 	for (i = 0; n / divisor > 9; i++)
 		divisor *= 10;
