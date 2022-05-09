@@ -1,39 +1,87 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
+
+/**
+ * _puts - prints a string, then a new line
+ * @str: string to print
+ *
+ * Return: none
+ */
+
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+}
+
+/**
+ * _atoi - converts ascii to integer
+ * @s: the string
+ *
+ * Return: integer
+ */
+
+int _atoi(const char *s)
+{
+	int sign = 1;
+	unsigned long int first_num, i, resp = 0;
+
+	for (first_num = 0; !(s[first_num] >= 48 && s[first_num] <= 57); first_num++)
+	{
+		if (s[first_num] == '-')
+			sign *= -1;
+	}
+
+	for (i = first_num; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
+}
+
+/**
+ * print_int - prints an integer
+ * @n: integer
+ *
+ * Return : None
+ */
+
+void print_int(unsigned long int n)
+{
+	unsigned long int i, resp, divisor;
+
+	for (i = 0; n / divisor > 9; i++)
+		divisor *= 10;
+
+	for (; divisor >= 1; n %= divisor, divisor /= 10)
+	{
+		resp = n / divisor;
+		_putchar(resp + '0');
+	}
+}
 
 /**
  * main - multiplies two positive numbers
  * @argc: number of command line arguments
  * @argv: command line arguments
  *
- * Return : 0 if success
+ * Return: 0 if success
  */
 
-int main(int argc, char **argv)
+int main(int argc, char const *argv[])
 {
-	unsigned long result;
-	int i, j;
+	(void)argc;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_puts("Error ");
 		exit(98);
 	}
-
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (argv[i][j] > 57 || argv[i][j] < 48)
-			{
-				printf("Error\n");
-				exit(98);
-			}
-		}
-	}
-	result = atol(argv[1]) * atol(argv[2]);
-	printf("%lu\n", result);
+	print_int(_atoi(argv[1]) * _atoi(argv[2]));
+	_putchar('\n');
 
 	return (0);
 }
