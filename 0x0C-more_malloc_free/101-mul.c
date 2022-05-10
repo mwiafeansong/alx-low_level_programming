@@ -59,7 +59,7 @@ void populateResult(char *dest, char *s1, char *s2, int len_s1, int len_s2)
 		
 		while (k >= 0)
 		{
-			temp = ((nultip[k] - '0') * (multiplier[j] - '0'));
+			temp = ((multip[k] - '0') * (multiplier[j] - '0'));
 			temp += carry_value;
 			if (j + 1 <= len_s2 - 1 && dest[k + j + 1] >= '0' && dest[k + j + 1] <= '9')
 				temp += dest[k + j + 1] - '0';
