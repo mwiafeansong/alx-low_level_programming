@@ -4,7 +4,6 @@
 /**
  * dog_t - defines type for struct dog
  */
-
 typedef struct dog dog_t;
 
 /**
@@ -15,7 +14,6 @@ typedef struct dog dog_t;
  *
  * Description: struct of dog
  */
-
 struct dog
 {
 	char *name;
