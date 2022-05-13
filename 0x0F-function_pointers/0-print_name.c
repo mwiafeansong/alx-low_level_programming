@@ -3,14 +3,13 @@
 /**
  * print_name - prints a name
  * @name: name to print
- * @f: function pointer
+ * @f: pointer to a function
  *
  * Return: None
  */
 
-void print_name(char *name, void (*f)(char *s))
+void print_name(char *name, void (*f)(char *))
 {
-	if (!name || !f)
-		return;
-	f(name);
+	if (name && f)
+		f(name);
 }
