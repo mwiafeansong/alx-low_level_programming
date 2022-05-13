@@ -3,11 +3,11 @@
 /**
  * int _index - searches for an integer
  * @array: array to search
- * size: size of array
+ * @size: size of array
  * @cmp: compares values
  *
  * Return: index of first element for which cmp does not return 0,
- * -1 if no element matches
+ * or -1 if no element matches
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
