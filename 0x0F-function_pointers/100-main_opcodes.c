@@ -2,17 +2,16 @@
 #include <stdlib.h>
 
 /**
- * main - entry point
+ * main - Entry point
  * @argc: number of command line arguments
  * @argv: command line arguments
  *
  * Return: Always 0 (Success)
  */
 
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
-	char *ops = (char *) main;
-	int i, num_bytes;
+	int i, nbytes;
 
 	if (argc != 2)
 	{
@@ -20,20 +19,21 @@ int main(int argc, int *argv[])
 		exit(1);
 	}
 
-	num_bytes = atoi(argv[1]);
+	nbytes = atoi(argv[1]);
 
-	if (num_bytes < 0)
+	if (nbytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	for (i = 0; i < num_bytes; i++)
+	for (i = 0; i < nbytes; i++)
 	{
-		printf("%02x", ops[i] & 0xFF);
-		if (i != num_bytes - 1)
+		printf("%02hhx", *((char *)main + i));
+		if (i < nbytes - 1)
 			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
