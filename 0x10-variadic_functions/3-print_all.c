@@ -38,7 +38,10 @@ void print_all(const char * const format, ...)
 				str = va_arg(args, char*);
 				c = 1;
 				if (!str)
+				{
 					printf("(nil)");
+					break;
+				}
 				printf("%s", str);
 		}
 		if ((format[j] != format[i - 1]) && c)
