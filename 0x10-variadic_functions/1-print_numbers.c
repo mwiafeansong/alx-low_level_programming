@@ -4,7 +4,7 @@
 
 /**
  * print_numbers - prints integer parameters
- * @s: separates the integers
+ * @separator: separates the integers
  * @n: number of parameters
  * @...: variable number of parameters
  *
