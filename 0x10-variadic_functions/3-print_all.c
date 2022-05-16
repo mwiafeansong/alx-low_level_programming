@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 				printf("%s", str);
 		}
-		if ((format[j] != format[i - 1]) && c && format[j])
+		if ((format[j] != format[i - 1]) && c)
 			printf(", ");
 		j++;
 		c = 0;
