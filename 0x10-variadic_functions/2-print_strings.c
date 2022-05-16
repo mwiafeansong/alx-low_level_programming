@@ -4,6 +4,7 @@
 
 /**
  * print_strings - prints string arguments
+ * @separator: separates the strings
  * @n: number of stings
  * @...: variable number of string parameters
  *
