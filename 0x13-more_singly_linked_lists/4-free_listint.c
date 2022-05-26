@@ -2,7 +2,7 @@
 
 /**
  * free_listint - frees a listint_t list
- * @h: singly linked list
+ * @head: singly linked list
  *
  * Return: None
  */
