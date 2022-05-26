@@ -14,7 +14,7 @@ void free_listint2(listint_t **head)
 
 	if (head != NULL)
 	{
-		while (ptr != NULL)
+		while (ptr != NULL || ptr2 != NULL)
 		{
 			ptr2 = ptr2->next;
 			free(ptr);
