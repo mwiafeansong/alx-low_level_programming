@@ -20,13 +20,11 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = j - 1; i >= 0; i--)
 	{
-		if (b[i] != 0 && b[i] != 1)
+		if (b[i] < '0' && b[i] > '1')
 			return (0);
-		if (b[i] == 1)
-		{
+		if (b[i] == '1')
 			total += dec_value;
-			dec_value *= 2;
-		}
+		dec_value *= 2;
 	}
 
 	return (total);
