@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 			open_error(-1, 0, argv);
 		nwrite = write(file_to, buf, nread);
 		if (nwrite == -1)
-			open_error(-1, 0, argv);
+			open_error(0, -1, argv);
 	}
 
 	err_close = close(file_from);
